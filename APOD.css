@@ -1,0 +1,67 @@
+*{
+
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+}
+
+body{
+
+    width: 100%;
+    background-color: rgb(27, 26, 26);
+    color: blanchedalmond;
+}
+
+.container{
+    margin-left: 3%;
+    margin-right: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.titulo{
+
+    margin-top: 1%;
+}
+
+.card{
+
+    /* border: 2px black solid; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.invisivel{
+
+    display: none;
+}
+
+.containerIMG{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70em;
+    margin-left: 6%;
+    /* border: 2px white solid; */
+
+}
+.imgTitulo{
+
+    font-size: 2em;
+    font-weight: bolder;
+}
+/* .foto{
+
+    max-width: 150em;
+    width: auto;
+    
+} */
+/* .descricao{
+
+    
+} */
