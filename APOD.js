@@ -17,6 +17,7 @@ botao.addEventListener('click', function(e){
     console.log(`${data.value}, Essa foi a data escolhida`)
     buscaInfo()
     mostraImagem()
+   
     mostraDescricao()
 
 })
@@ -25,12 +26,23 @@ function mostraImagem(){
 
     imagem.classList.remove('invisivel')
     imgTitulo.classList.remove('invisivel')
+    escondeVideo()
     
+}
+function escondeImagem(){
+
+    imagem.classList.add('invisivel')
 }
 
 function mostraVideo(){
 
     video.classList.remove('invisivel')
+    escondeImagem()
+}
+
+function escondeVideo(){
+
+    video.classList.add('invisivel')
 }
 
 function mostraDescricao(){
@@ -49,10 +61,15 @@ function buscaInfo(){
             
             var resultado = result
             console.log(resultado) 
+            
+            if(resultado.url.indexOf('youtube') == 12){
 
-            imagem.src = resultado.url
+                video.src = resultado.url
+                mostraVideo()
+            } else { imagem.src = resultado.url }
+
+            
             imgTitulo.textContent = resultado.title
-            // video.src = resultado.url
             descricao.textContent = resultado.explanation
 
         }
